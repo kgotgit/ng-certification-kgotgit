@@ -1,0 +1,18 @@
+<div class="well">
+	<form [formGroup]="_formGroup">
+		<h2>Enter a zipcode:</h2>
+		<input class="form-control" placeholder="Zipcode" type="text" id="addLocation" maxlength="5" formControlName="zip">
+		<div class="alert alert-danger" role="alert"
+			*ngIf="_formGroup.controls.zip.hasError('required') && !_formGroup.controls.zip.pristine ">
+			{{_formGroup.controls.zip.errors.required}}
+		</div>
+		<div class="alert alert-danger" role="alert"
+			*ngIf="_formGroup.controls.zip.hasError('invalidZip') && !_formGroup.controls.zip.pristine ">
+			{{_formGroup.controls.zip.errors.invalidZip}}
+		</div>
+		<br>
+		<button class="btn btn-primary" id="addLocationBtn" (click)="addLocation($event)">
+    Add location
+  </button>
+	</form>
+</div>

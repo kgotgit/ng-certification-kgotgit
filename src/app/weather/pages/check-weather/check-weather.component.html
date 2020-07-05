@@ -1,0 +1,9 @@
+<div class="container">
+
+	<add-location (addZip)="onZipAdded($event)"></add-location>
+
+	<zip-weather-details *ngFor="let zipItem of zipMap |keyvalue" [zip]="zipItem.key"
+		[zipWeatherDetails]="zipItem.value" (onDelete)="onDelete($event)">
+
+	</zip-weather-details>
+</div>

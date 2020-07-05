@@ -1,0 +1,7 @@
+<ng-container [ngSwitch]="_type">
+	<img *ngSwitchCase="'Clear'"  [ngClass]="{'icon':_isIcon==true}"   src="https://www.angulartraining.com/images/weather/sun.png">
+	<img *ngSwitchCase="'Clouds'"  [ngClass]="{'icon':_isIcon==true}" src="https://www.angulartraining.com/images/weather/clouds.png">
+	<img *ngSwitchCase="'Thunderstorm'" [ngClass]="{'icon':_isIcon==true}" src="https://www.angulartraining.com/images/weather/rain.png">
+	<img *ngSwitchCase="'Rain'" [ngClass]="{'icon':_isIcon==true}"  src="https://www.angulartraining.com/images/weather/rain.png">
+	<img *ngSwitchCase="'Snow'" [ngClass]="{'icon':_isIcon==true}"  src="https://www.angulartraining.com/images/weather/snow.png">
+</ng-container>
